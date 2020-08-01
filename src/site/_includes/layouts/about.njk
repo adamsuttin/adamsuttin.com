@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    {% block meta_stylesheets %}
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Source+Serif+Pro&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ '/assets/css/base.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/about.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/animations.css' | url }}" />
+    {% endblock %}
+    <title>{{ title }} | Adam Suttin</title>
+  </head>
+  <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
+    <div class="page">
+      {% block main_header %}
+      {% include "layouts/partials/header.njk" %}
+      {% endblock %}
+
+      {% block main %}
+      <main>
+        <article>
+          <header>
+            <h1>Hi, I am Adam Suttin</h1>
+            <h2>I live and work somewhere between Dallas and Fort Worth, Texas, US</h2>
+          </header>
+          {{ content | safe }}
+        </article>
+      </main>
+      {% endblock %}
+
+      {% block main_footer %}
+      {% include "layouts/partials/footer.njk" %}
+      {% endblock %}
+    </div>
+
+    {% block main_navigation %}
+    {% include "layouts/partials/nav.njk" %}
+    {% endblock %}
+  </body>
+</html>

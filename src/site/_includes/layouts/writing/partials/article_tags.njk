@@ -1,0 +1,6 @@
+{% if tags %}
+<h6>Filed under</h6>
+<nav class="tags">
+{% for tag in tags %}
+  <a href="/writing/tags/{{ tag }}/">{{ tag }}</a>{% endfor %}
+</nav>{% endif %}

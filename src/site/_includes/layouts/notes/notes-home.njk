@@ -1,0 +1,21 @@
+{% extends "layouts/notes.njk" %}
+
+{% block main_column_1 %}
+<div class="listing">
+  {% include "layouts/partials/home_header.njk" %}
+  {% include "./partials/paginated_listing.njk" %}
+</div>
+{% endblock %}
+
+{% block main_column_2 %}
+<aside>
+  {% include "./partials/home_featured.njk" %}
+</aside>
+{% endblock %}
+
+{% block main_column_3 %}
+<aside>
+  {% include "./partials/archives.njk" %}
+  {% include "layouts/partials/around_world.njk" %}
+</aside>
+{% endblock %}

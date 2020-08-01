@@ -1,0 +1,11 @@
+<header>
+  <a href="/writing/" class="section-link">Writing</a>
+  <h1>{{ title }}</h1>
+  {% if subtitle %}<h2>{{ subtitle }}</h1>{% endif %}
+  <p class="date">{{ date | usDate }}</p>
+  {% if tags %}
+  <nav class="tags">
+  {% for tag in tags %}
+    <a href="/writing/tags/{{ tag }}/">{{ tag }}</a>{% endfor %}
+  </nav>{% endif %}
+</header>

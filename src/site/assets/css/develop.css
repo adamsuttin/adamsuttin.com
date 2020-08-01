@@ -1,0 +1,24 @@
+main header a.section-link,
+.main-nav a.nav-develop:hover,
+.main-nav a.nav-develop:active,
+.main-nav a.nav-develop.active {
+  background: var(--color-develop);
+  color: rgb(255,255,255);
+}
+
+h1.screen--heading {
+  background-color: var(--color-develop);
+  background-image: url(img/project-paper.png);
+  color: rgb(255,255,255);
+}
+h2.screen--subheading {
+  color: var(--color-develop);
+}
+
+main a:link { color: var(--color-develop); }
+main a:visited { color: var(--color-develop); }
+main a:active,
+main a:hover { background-color: var(--color-develop); color: rgb(255,255,255); }
+
+main aside a:active,
+main aside a:hover { background-color: transparent; color: rgb(0,0,0); }

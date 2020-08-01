@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/notes/notes-article.njk",
+  "subtitle": "Drafts, jottings and other marginalia",
+  "bodyClass": "screen--notes"
+}

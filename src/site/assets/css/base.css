@@ -1,0 +1,446 @@
+:root {
+  --color-home: rgb(41, 59, 73);
+  --color-home--rgb: 41, 59, 73;
+  --color-writing: rgb(113, 109, 106);
+  --color-notes: rgb(82, 145, 104);
+  --color-journal: rgb(247, 113, 52);
+  --color-design: rgb(232, 74, 74);
+  --color-design--rgb: 232, 74, 74;
+  --color-develop: rgb(1, 85, 111);
+  --color-learn: rgb(166, 46, 140);
+  --color-news: rgb(0,0,0);
+
+  --color-lightgreen: rgb(127,186,127);
+  --font-serif: 'Source Serif Pro', serif;
+  --font-sans-serif: 'Source Sans Pro', sans-serif;
+}
+
+
+body {
+  background-attachment: fixed;
+  background-color: transparent;
+  background-image: url('./img/misty-mountains.jpg');
+  background-size: cover;
+  background-position: 0% 62%;
+  background-repeat: no-repeat;
+  color: rgb(51,51,51);
+  font-family: var(--font-serif);
+  margin: 0;
+  padding: 0;
+}
+
+main,
+.main-footer {
+  background: rgb(255,255,255);
+}
+
+main {
+  border-top: 1px solid rgb(51,51,51);
+}
+
+.main-header {
+  display: flex;
+  font-family: var(--font-sans-serif);
+}
+
+.logo {
+  display: block;
+  margin: 0 0 2rem 3rem;
+  padding: 1rem 2rem 0 0;
+  text-decoration: none;
+}
+
+.logo .primary,
+.logo .secondary {
+  display: block;
+  line-height: 1;
+  margin: 0.25rem 0 0 0;
+  padding: 0;
+  text-transform: lowercase;
+}
+
+.logo .primary {
+  color: rgb(69, 123, 157);
+  text-shadow: 0 0 5px rgba(255,255,255,0.75);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.logo .secondary {
+  color: rgb(0,0,0);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+h1.screen--heading {
+  margin: 0 0 0 -3rem;
+  padding: 3rem 1rem 1rem 3rem;
+}
+h2.screen--subheading {
+  font-weight: 300;
+  padding: 1rem 1rem 2rem 1rem;
+  text-align: right;
+}
+
+.main-nav {
+  border-bottom: 0.3rem solid rgb(0,0,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-nav:before {
+  content: '';
+  margin: 0;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.main-nav a {
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: var(--font-sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+  color: rgb(31,31,31);
+}
+
+.main-nav a:first-of-type { margin-left: 5rem; }
+.main-nav a:last-of-type { margin-right: 5rem; }
+
+.main-nav a.nav-home {
+  border-top: 3px solid rgb(0,127,204);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 1rem 2rem;
+  margin-top: calc(-1rem - 3px);
+}
+
+
+.main-nav a.nav-home:link,
+.main-nav a.nav-home:visited,
+.main-nav a.nav-home:active,
+.main-nav a.nav-home:hover {
+  background: var(--color-home);
+  color: rgb(255,255,255);
+}
+
+.main-nav a.nav-writing:before { content: 'W'; }
+.main-nav a.nav-notes:before { content: 'N'; }
+.main-nav a.nav-journal:before { content: 'J'; }
+.main-nav a.nav-home:before { content: 'H'; }
+.main-nav a.nav-design:before { content: 'D'; }
+.main-nav a.nav-develop:before { content: 'V'; }
+.main-nav a.nav-learn:before { content: 'E'; }
+
+
+.main-footer {
+  border-bottom: 1px solid rgb(51,51,52);
+  margin: 0 0 50rem 0;
+  padding: 3rem 3rem 9rem 3rem;
+  text-align: center;
+}
+.main-footer:after {
+  content: 0;
+  height: 1rem;
+  background: linear-gradient(top bottom, rgba(0,0,0,0.2), transparent);
+  width: auto;
+}
+
+.main-footer nav {
+  font-family: var(--font-sans-serif);
+  margin: 2rem 0;
+}
+.main-footer nav a {
+  border-right: 1px solid rgb(204,204,204);
+  padding: 0 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.main-footer nav a:last-of-type {
+  border-right: 0;
+}
+
+.main-footer nav a:link { color: rgb(127,127,127); }
+.main-footer nav a:visited { color: rgb(127,127,127); }
+.main-footer nav a:hover { color: rgb(255,0,0); }
+.main-footer nav a:active { color: rgb(255,0,0); }
+
+.main-footer .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit), minmax(30rem, 1fr);
+}
+
+.copyright {
+  color: rgb(127,127,127);
+  font-family: var(--font-sans-serif);
+  font-size: .85rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  min-height: 75vh;
+}
+
+h1.screen--heading {
+  font-size: 7rem;
+}
+
+main .listing,
+main article,
+main aside {
+  margin: 3rem;
+}
+
+nav.pagination {
+  color: rgb(127,127,127);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+nav.pagination span,
+nav.pagination a {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0 1rem;
+  text-decoration: none;
+}
+
+main .listing article {
+  margin: 0 0 3rem 0;
+}
+
+main header {
+  margin: 0;
+}
+
+main header a.section-link {
+  background-color: rgb(69, 123, 157);
+  color: rgb(255,255,235);
+  display: flex;
+  font-family: var(--font-sans-serif);
+  left: 0;
+  padding: 1rem 0.25rem;
+  position: fixed;
+  text-decoration: none;
+  text-orientation: mixed;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+}
+
+main header h1 {
+  font-size: 3rem;
+  line-height: calc(1ex / 0.42);
+  margin: 1.66rem 0 0.83rem 0;
+}
+main header h2 {
+  color: rgb(127,127,127);
+  font-size: 2rem;
+  line-height: calc(1ex / 0.42);
+  margin: 0;
+}
+
+article.content header {
+  border-bottom: 2px solid rgb(204,204,204);
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+}
+
+article p.date {
+  color: rgb(127,127,127);
+  font-family: var(--font-sans-serif);
+}
+
+article h3 { font-size: 2rem; line-height: calc(1ex / 0.38); margin-bottom: 2rem; }
+article h4 { font-size: 1.8rem; line-height: calc(1ex / 0.37); margin-bottom: 1.8rem; }
+article h5 { font-size: 1.6rem; line-height: calc(1ex / 0.32); margin-bottom: 1.6rem; }
+article h6 { font-size: 1.4rem; line-height: calc(1ex / 0.32); margin-bottom: 1.4rem; }
+
+@supports (font-size-adjust: 1) {
+  article {
+      font-size-adjust: 0.5;
+  }
+}
+
+article p,
+article li {
+  line-height: calc(1ex/0.32);
+}
+
+.listing article header {
+  margin: 0 0 1rem 0;
+}
+.listing article h4 { margin: 0; }
+.listing article h5 { font-size: 1.4rem; margin: 0; }
+.listing article p { margin: 0; }
+.listing article p.date { margin: 0.5rem 0 0 0; }
+
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem 0;
+}
+
+.tags a {
+  font-family: var(--font-sans-serif);
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0 0.5rem 0.25rem 0;
+  padding: 0.15rem 0.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+article p,
+article li,
+article dt,
+article dd,
+aside nav a {
+  font-size: 1.2rem;
+}
+
+aside h6 {
+  clear: both;
+  color: rgb(127,127,127);
+  font-family: var(--font-sans-serif);
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+  margin: 1.66rem 0;
+  text-transform: lowercase;
+}
+
+aside nav ul,
+aside nav ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+aside nav:after {
+  content: '';
+  display: block;
+  margin-bottom: 2rem;
+}
+
+aside nav a {
+  display: inline-block;
+  font-family: var(--font-sans-serif);
+  margin: 0 0 .5rem 0;
+  text-decoration: none;
+}
+
+.spacer { flex: 1; }
+
+@media screen and (max-width: 767px) {
+  .main-footer {
+    margin-bottom: 16rem;
+  }
+  .main-nav a span {
+    display: none;
+  }
+  .main-nav a:before {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav a:before {
+    display: none;
+  }
+  .main-nav a span {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .main-footer {
+    margin-bottom: 25rem;
+  }
+  .main-nav {
+    background: linear-gradient(
+      to left,
+      transparent 0%,
+    rgba(240, 229, 125, 0.5) 7.5%,
+    rgb(202, 165, 69) 50%,
+    rgba(240, 229, 125, 0.5) 92.5%,
+      transparent 100%
+    );
+  }
+  .main-nav:before {
+    background: linear-gradient(
+      to left,
+      transparent 0%,
+      rgb(51,51,51) 50%,
+      transparent 100%
+    );
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  main {
+    grid-template-columns: minmax(50%, 2fr) 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .main-nav {
+    background: linear-gradient(
+      to left,
+      transparent 10%,
+    rgba(240, 229, 125, 0.5) 30%,
+    rgb(202, 165, 69) 50%,
+    rgba(240, 229, 125, 0.5) 70%,
+      transparent 90%
+    );
+  }
+  .main-nav:before {
+    background: linear-gradient(
+      to left,
+      transparent 10%,
+      rgb(51,51,51) 50%,
+      transparent 90%
+    );
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .main-nav {
+    background: linear-gradient(
+      to left,
+      transparent 20%,
+    rgba(240, 229, 125, 0.5) 30%,
+    rgb(202, 165, 69) 50%,
+    rgba(240, 229, 125, 0.5) 70%,
+      transparent 80%
+    );
+  }
+  .main-nav:before {
+    background: linear-gradient(
+      to left,
+      transparent 20%,
+      rgb(51,51,51) 50%,
+      transparent 80%
+    );
+  }
+}

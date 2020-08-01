@@ -1,0 +1,19 @@
+{% extends "layouts/news.njk" %}
+
+{% block main_column_1 %}
+<div class="listing">
+  {% include "layouts/partials/home_header.njk" %}
+  {% include "./partials/listing.njk" %}
+</div>
+{% endblock %}
+
+{% block main_column_2 %}
+<aside>
+  <h6>Topics</h6>
+  <nav>
+    <ul>{% for t in topics %}
+      <li><a href="/news/{{ t }}/">{{ t }}</a></li>{% endfor %}
+    </ul>
+  </nav>
+</aside>
+{% endblock %}

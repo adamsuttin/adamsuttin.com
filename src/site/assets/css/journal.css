@@ -1,0 +1,24 @@
+main header a.section-link,
+.main-nav a.nav-journal:active,
+.main-nav a.nav-journal:hover,
+.main-nav a.nav-journal.active {
+  background: var(--color-journal);
+  color: rgb(255,255,255);
+}
+
+h1.screen--heading {
+  background-color: var(--color-journal);
+  background-image: url(img/greyzz.png);
+  color: rgb(255,255,255);
+}
+h2.screen--subheading {
+  color: var(--color-journal);
+}
+
+main a:link { color: var(--color-journal); }
+main a:visited { color: var(--color-journal); }
+main a:active,
+main a:hover { background-color: var(--color-journal); color: rgb(255,255,255); }
+
+main aside a:active,
+main aside a:hover { background-color: transparent; color: rgb(0,0,0); }

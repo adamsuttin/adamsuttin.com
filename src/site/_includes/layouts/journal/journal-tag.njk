@@ -1,0 +1,20 @@
+{% extends "layouts/journal.njk" %}
+
+{% block main_column_1 %}
+<div class="listing">
+  {% include "./partials/tag_header.njk" %}
+  {% include "./partials/tag_listing.njk" %}
+</div>
+{% endblock %}
+
+{% block main_column_2 %}
+<aside>
+  {% include "./partials/archives.njk" %}
+</aside>
+{% endblock %}
+
+{% block main_column_3 %}
+<aside>
+  {% include "layouts/partials/around_world.njk" %}
+</aside>
+{% endblock %}

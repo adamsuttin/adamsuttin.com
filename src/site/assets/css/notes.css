@@ -1,0 +1,67 @@
+main header a.section-link,
+.main-nav a.nav-notes:hover,
+.main-nav a.nav-notes:active,
+.main-nav a.nav-notes.active {
+  background: var(--color-notes);
+  color: rgb(255,255,255);
+}
+
+h1.screen--heading {
+  background-color: var(--color-notes);
+  background-image: url(img/light-wool.png);
+  color: rgb(255,255,255);
+}
+h2.screen--subheading {
+  color: var(--color-notes);
+}
+
+.listing > .cards {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin: 2rem 0 0 0;
+}
+
+.listing article {
+  background: rgb(255,255,255);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  padding: 1rem;
+}
+.listing article:hover {
+  background: rgba(14, 173, 105, 0.05);
+}
+
+.listing .cards h4 { font-size: 1.2rem; }
+.listing .cards header p { font-size: 1rem; }
+
+main a:link { color: var(--color-notes); }
+main a:visited { color: var(--color-notes); }
+main a:active,
+main a:hover { background-color: var(--color-notes); color: rgb(255,255,255); }
+
+article.content ul {
+  margin: 0 0 2rem 1rem;
+  padding: 0;
+}
+
+article.content li {
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.notes--links > ul {
+  margin: 0;
+  padding: 0 0 0 1rem;
+}
+
+.notes--links ul > li {
+  list-style-position: outside;
+  list-style-type: '\260D';
+  margin: 0 0 .5rem 0;
+  padding: 0 0 0 .5rem;
+}
+
+aside nav a:before:link { color: rgb(127,127,127); }
+aside nav a:before:visited { color: rgb(156,156,156); }
+aside nav a:before:active,
+aside nav a:before:hover { color: rgb(255,0,0); content: '\25F3'; }

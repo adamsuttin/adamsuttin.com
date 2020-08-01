@@ -1,0 +1,23 @@
+{% extends "layouts/notes.njk" %}
+
+{% block main_column_1 %}
+<article class="{% if contentClass %}{{ contentClass }}{% else %}content{%endif %}">
+  {% include "./partials/article_header.njk" %}
+  {% include "./partials/article_body.njk" %}
+  {% include "./partials/article_footer.njk" %}
+</article>
+{% endblock %}
+
+{% block main_column_2 %}
+<aside>
+  {% include "./partials/article_tags.njk" %}
+  {% include "./partials/article_related.njk" %}
+</aside>
+{% endblock %}
+
+{% block main_column_3 %}
+<aside>
+  {% include "./partials/archives.njk" %}
+  {% include "layouts/partials/around_world.njk" %}
+</aside>
+{% endblock %}

@@ -1,0 +1,13 @@
+{
+  "subtitle": "Top headlines from around the world",
+  "eleventyComputed": {
+    "topics": [
+      "dallas",
+      "europe",
+      "fort-worth",
+      "poland",
+      "russia",
+      "texas"
+    ]
+  }
+}

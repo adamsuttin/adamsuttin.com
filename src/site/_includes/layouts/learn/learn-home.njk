@@ -1,0 +1,20 @@
+{% extends "layouts/learn.njk" %}
+
+{% block main_column_1 %}
+<div class="listing">
+  {% include "layouts/partials/home_header.njk" %}
+  {% include "./partials/paginated_listing.njk" %}
+</div>
+{% endblock %}
+
+{% block main_column_2 %}
+<aside>
+
+</aside>
+{% endblock %}
+
+{% block main_column_3 %}
+<aside>
+  {% include "./partials/archives.njk" %}
+</aside>
+{% endblock %}

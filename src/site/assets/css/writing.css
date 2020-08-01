@@ -1,0 +1,26 @@
+main header a.section-link,
+.main-nav a.nav-writing:hover,
+.main-nav a.nav-writing:active,
+.main-nav a.nav-writing.active {
+  background: var(--color-writing);
+  color: rgb(255,255,255);
+}
+
+h1.screen--heading {
+  background-color: var(--color-writing);
+  background-image: url(img/simple-dashed.png);
+  color: rgb(255,255,255);
+}
+h2.screen--subheading {
+  color: var(--color-writing);
+}
+
+main a:link { color: var(--color-writing); }
+main a:visited { color: var(--color-writing); }
+main a:active,
+main a:hover { background-color: var(--color-writing); color: rgb(255,255,255); }
+
+aside nav a:before:link { color: rgb(127,127,127); }
+aside nav a:before:visited { color: rgb(156,156,156); }
+aside nav a:before:active,
+aside nav a:before:hover { color: rgb(255,0,0); content: '\25F3'; }

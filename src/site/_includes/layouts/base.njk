@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+
+
+    {% if page.url !== '/' %}
+    <link rel="home" href="http://adamsuttin.com/" title="Home" />{% endif %}
+    {% if page.url !== '/writing/' %}
+    <link rel="writing" href="http://adamsuttin.com/writing/" title="Writing" />{% endif %}
+    {% if page.url !== '/notes/' %}
+    <link rel="notes" href="http://adamsuttin.com/notes/" title="Notes" />{% endif %}
+    {% if page.url !== '/journal/' %}
+    <link rel="journal" href="http://adamsuttin.com/journal/" title="Journal" />{% endif %}
+    {% if page.url !== '/design/' %}
+    <link rel="design" href="http://adamsuttin.com/design/" title="Design" />{% endif %}
+    {% if page.url !== '/develop/' %}
+    <link rel="develop" href="http://adamsuttin.com/develop/" title="Develop" />{% endif %}
+    {% if page.url !== '/learn/' %}
+    <link rel="learn" href="http://adamsuttin.com/journal/" title="learn" />{% endif %}
+
+    <title>{{ title }} | Adam Suttin</title>
+    {% if summary %}
+    <meta name="description" content="{{ summary | safe }}" />{% endif %}
+    
+    <link rel="canonical" href="http://adamsuttin.com{{ page.url | url }}" />
+    
+    {% block meta_stylesheets %}
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Source+Serif+Pro&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ '/assets/css/base.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/animations.css' | url }}" />
+    {% endblock %}
+    
+  </head>
+  <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
+
+    {% block main_header %}
+    {% include "layouts/partials/header.njk" %}
+    {% endblock %}
+
+    {% block main %}
+    <main>
+      {% block main_column_1 %}{% endblock %}
+      {% block main_column_2 %}{% endblock %}
+      {% block main_column_3 %}{% endblock %}
+    </main>
+    {% endblock %}
+
+    {% block main_footer %}
+    {% include "layouts/partials/footer.njk" %}
+    {% endblock %}
+
+    {% block main_navigation %}
+    {% include "layouts/partials/nav.njk" %}
+    {% endblock %}
+
+    {% block foot_scripts %}
+    {% endblock %}
+  </body>
+</html>

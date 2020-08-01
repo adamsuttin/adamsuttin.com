@@ -1,0 +1,31 @@
+{
+  "name": "adamsuttin.com",
+  "version": "0.0.1",
+  "description": "The website of adamsuttin.com",
+  "keywords": [],
+  "author": "Adam Suttin",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "npm run build & serve ./dist/",
+    "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve",
+    "debug": "cross-env DEBUG=Eleventy* ELEVENTY_ENV=dev eleventy --serve",
+    "build": "cross-env ELEVENTY_ENV=prod eleventy",
+    "seed": "cross-env ELEVENTY_ENV=seed eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-cache-assets": "^2.0.3",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "cross-env": "^7.0.2",
+    "node-fetch": "^2.6.0",
+    "postcss": "^7.0.32",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.3",
+    "postcss-preset-env": "^6.7.0",
+    "serve": "^11.3.2",
+    "terser": "^4.8.0"
+  }
+}

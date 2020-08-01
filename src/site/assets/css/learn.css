@@ -1,0 +1,24 @@
+main header a.section-link,
+.main-nav a.nav-learn:hover,
+.main-nav a.nav-learn:active,
+.main-nav a.nav-learn.active {
+  background: var(--color-learn);
+  color: rgb(255,255,255);
+}
+
+h1.screen--heading {
+  background-color: var(--color-learn);
+  background-image: url(img/maze-white.png);
+  color: rgb(255,255,255);
+}
+h2.screen--subheading {
+  color: var(--color-learn);
+}
+
+main a:link { color: var(--color-learn); }
+main a:visited { color: var(--color-learn); }
+main a:active,
+main a:hover { background-color: var(--color-learn); color: rgb(255,255,255); }
+
+main aside a:active,
+main aside a:hover { background-color: transparent; color: rgb(0,0,0); }

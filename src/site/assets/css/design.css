@@ -1,0 +1,66 @@
+main {
+  border-top: 0;
+  background: transparent;
+  display: block;
+  width: 70%;
+}
+.main-footer {
+  border-bottom: 0;
+  background: transparent;
+}
+
+main header a.section-link,
+.main-nav a.nav-design:hover,
+.main-nav a.nav-design:active,
+.main-nav a.nav-design.active {
+  background: var(--color-design);
+  color: rgb(255,255,255);
+}
+
+h1.screen--heading {
+  background-color: var(--color-design);
+  background-image: url(img/pixel-weave.png);
+  color: rgb(255,255,255);
+}
+h2.screen--subheading {
+  color: rgb(255,255,255);
+}
+
+main .listing .cards {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  margin: 2rem 0;
+}
+main .listing article {
+  background: rgba(18, 30, 44, 0.75);
+  color: rgb(255,255,255);
+  margin: 0;
+  min-height: 20rem;
+  padding: 1rem;
+}
+main .listing article h4,
+main .listing article h5 {
+  font-weight: 400;
+}
+main .listing article h4 a {
+  background-color: var(--color-design); color: rgb(255,255,255);
+  display: inline-block;
+  margin-left: -1.1rem;
+  padding: 1rem 1rem 0 1rem;
+  text-decoration: none;
+}
+
+main a:link { color: var(--color-design); }
+main a:visited { color: var(--color-design); }
+main a:active,
+main a:hover { background-color: var(--color-design); color: rgb(255,255,255); }
+
+main aside a:active,
+main aside a:hover { background-color: transparent; color: rgb(0,0,0); }
+
+main > header,
+.main-footer a,
+.main-footer p {
+  text-shadow: 0 0 3px rgb(255,255,255);
+}

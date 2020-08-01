@@ -1,0 +1,10 @@
+.page {
+  background-color: rgb(255,255,255);
+  background-image: url(./img/dfw.jpg);
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.main-header,
+main,
+.main-footer { background: transparent; }

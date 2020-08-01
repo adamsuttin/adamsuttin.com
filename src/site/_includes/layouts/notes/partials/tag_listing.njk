@@ -1,0 +1,19 @@
+<div class="cards">
+{% for note in collections.notesEntries | tagged(tag) %}
+  <article>
+    <header>
+      <h4><a href="{{ note.url | url }}">{{ note.data.title }}</a></h4>
+      {% if note.data.subtitle %}<h5>{{ note.data.subtitle }}</h5>{% endif %}
+      <p class="date">{{ note.date | usDate }}</p>
+    </header>
+    {% if note.data.summary %}
+    <p>{{ note.data.summary | safe }}</p>
+    {% endif %}
+    {% if note.data.tags %}
+    <nav class="tags">
+    {% for tag in note.data.tags %}
+      <a href="/notes/tags/{{ tag }}/">{{ tag }}</a>{% endfor %}
+    </nav>{% endif %}
+  </article>
+{% endfor %}
+</div>

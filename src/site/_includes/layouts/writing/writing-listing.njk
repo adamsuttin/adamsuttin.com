@@ -1,0 +1,19 @@
+{% extends "layouts/writing.njk" %}
+
+{% block main_column_1 %}
+<div class="listing">
+  {% include "./partials/listing_header.njk" %}
+</div>
+{% endblock %}
+
+{% block main_column_2 %}
+<aside>
+  {% include "./partials/archives.njk" %}
+</aside>
+{% endblock %}
+
+{% block main_column_3 %}
+<aside>
+  {% include "layouts/partials/around_world.njk" %}
+</aside>
+{% endblock %}

@@ -1,0 +1,15 @@
+<div class="news-page">
+{% for article in headlines.articles %}
+  <article>
+    <header>
+      {% if article.source %}
+      <p class="source">{{ article.source.name }}{% if article.publishedAt %} ~ {{ article.publishedAt | dateTime }}{% endif %}</p>{% endif %}
+      <h4><a href="{{ article.url | url }}">{{ article.title }}</a></h4>
+      {% if article.author %}
+      <p class="author">{{ article.author }}</p>{% endif %}
+    </header>
+    {% if article.description %}
+    <p>{{ article.description | safe }}</p>{% endif %}
+  </article>
+{% endfor %}
+</div>

@@ -1,0 +1,11 @@
+<header>
+  <a href="/journal/" class="section-link">Journal</a>
+  <h1>{{ title }}</h1>
+  <h2>{{ subtitle }}</h1>
+  <p class="date">{{ date | usDate }}</p>
+  {% if tags %}
+  <nav class="tags">
+  {% for tag in tags %}
+    <a href="/journal/tags/{{ tag }}/">{{ tag }}</a>{% endfor %}
+  </nav>{% endif %}
+</header>

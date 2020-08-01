@@ -1,0 +1,7 @@
+<nav class="pagination" aria-labelledby="my-pagination">
+  {% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">« Newest</a>{% else %}<span>« Newest</span>{% endif %}
+  {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">‹ Newer</a>{% else %}<span>‹ Newer</span>{% endif %}
+  <span class="ornamental">🙙</span>
+  {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Older ›</a>{% else %}<span>Older ›</span>{% endif %}
+  {% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Oldest »</a>{% else %}<span>Oldest »</span>{% endif %}
+</nav>

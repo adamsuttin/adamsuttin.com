@@ -1,0 +1,19 @@
+{% include "layouts/partials/pagination.njk" %}
+{% for post in pagination.items %}
+  <article>
+    <header>
+      <h4><a href="{{ post.url | url }}">{{ post.data.title }}</a></h4>
+      {% if post.data.subtitle %}<h5>{{ post.data.subtitle }}</h5>{% endif %}
+      <p class="date">{{ post.date | usDate }}</p>
+    </header>
+    {% if post.data.summary %}
+    <p>{{ post.data.summary | safe }}</p>
+    {% endif %}
+    {% if post.data.tags %}
+    <nav class="tags">
+    {% for tag in post.data.tags %}
+      <a href="/journal/tags/{{ tag }}/">{{ tag }}</a>{% endfor %}
+    </nav>{% endif %}
+  </article>
+{%- endfor -%}
+{% include "layouts/partials/pagination.njk" %}
