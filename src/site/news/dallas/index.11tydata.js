@@ -18,8 +18,6 @@ module.exports = async function () {
   const URL = `${NEWS_API_URL}?${qs.stringify(params)}`
   let output = {}
 
-  console.log('Dallas News', URL)
-
   try {
     let json = await Cache(URL, {
       duration: '6h', // 6 hour
