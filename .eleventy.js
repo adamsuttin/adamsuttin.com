@@ -5,7 +5,7 @@ const Terser = require('terser')
 module.exports = function(config) {
 
   // A useful way to reference the context we are runing eleventy in
-  let env = process.env.ELEVENTY_ENV
+  // let env = process.env.ELEVENTY_ENV
 
   config.setQuietMode(true)
 
@@ -137,7 +137,7 @@ module.exports = function(config) {
     dir: {
       input: 'src/site',
       output: 'dist',
-      data: `_data/${(env === 'seed') ? 'prod' : env}`
+      data: `_data`
     },
     templateFormats : ['njk', 'md'],
     htmlTemplateEngine : 'njk',

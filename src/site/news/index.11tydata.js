@@ -1,13 +1,22 @@
+const qs = require('querystring')
 const Cache = require('@11ty/eleventy-cache-assets')
+const dotenv = require('dotenv')
+dotenv.config()
 
-const lang = 'en' 
-const API_KEY = '9e19e75f60e7436fb7da4ca2845fe4cd'
-const BASE_URL = 'http://newsapi.org/v2/top-headlines'
-const excludeDomains = 'buzzfeed.com,lifehacker.com,mashable.com,www.engadget.com,gizmodo.com,techcrunch.com,www.cnet.com,www.macrumors.com,www.tsn.ca,www.nationalgeographic.com'
-const pageSize = 100
+const NEWS_API_URL = `${process.env.NEWS_API_BASEURL}/top-headlines`
+
+const params = {
+  country         : `${process.env.NEWS_API_COUNTRY || 'us'}`,
+  language        : `${process.env.NEWS_API_LANG || 'en' }`,
+  excludeDomains  : `${process.env.NEWS_API_EXCLUDE_DOMAINS}`,
+  category        : 'general',
+  pageSize        : `${process.env.NEWS_API_PAGE_SIZE || 100}`,
+  sortBy          : `${process.env.NEWS_API_SORT_BY || 'publishedAt'}`,
+  apiKey          : `${process.env.NEWS_API_KEY}`
+}
 
 module.exports = async function () {
-  const URL = `${BASE_URL}?country=us&language=en&category=general&excludeDomains=${excludeDomains}&pageSize=${pageSize}&sortBy=publishedAt&apiKey=${API_KEY}`
+  const URL = `${NEWS_API_URL}?${qs.stringify(params)}`
   let output = {}
 
   try {
