@@ -8,8 +8,16 @@ main header a.section-link,
 
 h1.screen--heading {
   background-color: var(--color-notes);
-  background-image: url(img/light-wool.png);
+  background-image: url(img/notebooks-banner.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: rgba(0,0,0,.75);
+  border-style: solid;
+  border-width: 1rem 1px 1px 0;
   color: rgb(255,255,255);
+  min-height: 20rem;
+  text-transform: uppercase;
 }
 h2.screen--subheading {
   color: var(--color-notes);
@@ -34,10 +42,21 @@ h2.screen--subheading {
 .listing .cards h4 { font-size: 1.2rem; }
 .listing .cards header p { font-size: 1rem; }
 
-main a:link { color: var(--color-notes); }
-main a:visited { color: var(--color-notes); }
+main a {
+  background-image: linear-gradient(transparent 70%,var(--color-notes) 70%,var(--color-notes) 85%,transparent 85%,transparent 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: inherit;
+  text-decoration: underline;
+  transition: all .25s;
+}
+
 main a:active,
-main a:hover { background-color: var(--color-notes); color: rgb(255,255,255); }
+main a:focus,
+main a:hover {
+  background-size: 0 100%;
+  text-decoration: none;
+}
 
 article.content ul {
   margin: 0 0 2rem 1rem;
@@ -60,8 +79,3 @@ article.content li {
   margin: 0 0 .5rem 0;
   padding: 0 0 0 .5rem;
 }
-
-aside nav a:before:link { color: rgb(127,127,127); }
-aside nav a:before:visited { color: rgb(156,156,156); }
-aside nav a:before:active,
-aside nav a:before:hover { color: rgb(255,0,0); content: '\25F3'; }

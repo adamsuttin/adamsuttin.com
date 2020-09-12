@@ -1,13 +1,13 @@
 :root {
-  --color-home: rgb(41, 59, 73);
-  --color-home--rgb: 41, 59, 73;
-  --color-writing: rgb(113, 109, 106);
-  --color-notes: rgb(82, 145, 104);
-  --color-journal: rgb(247, 113, 52);
-  --color-design: rgb(232, 74, 74);
-  --color-design--rgb: 232, 74, 74;
+  --color-home: rgb(44,16,70);
+  --color-home--rgb: 44, 16, 109;
+  --color-writing: rgb(244,213,75);
+  --color-notes: rgb(73,198,188);
+  --color-journal: rgb(174,48,242);
+  --color-design: rgb(166, 46, 140);
+  --color-design--rgb: 166, 46, 140;
   --color-develop: rgb(1, 85, 111);
-  --color-learn: rgb(166, 46, 140);
+  --color-learn: rgb(232, 74, 74);
   --color-news: rgb(0,0,0);
 
   --color-lightgreen: rgb(127,186,127);
@@ -86,6 +86,7 @@ h2.screen--subheading {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 1px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -220,7 +221,6 @@ nav.pagination a {
   font-size: 1.1rem;
   margin: 0;
   padding: 0 1rem;
-  text-decoration: none;
 }
 
 main .listing article {
@@ -302,9 +302,8 @@ article li {
   font-family: var(--font-sans-serif);
   font-size: 1rem;
   line-height: 1;
-  margin: 0 0.5rem 0.25rem 0;
-  padding: 0.15rem 0.25rem;
-  text-decoration: none;
+  margin: 0 0.5rem 0 0;
+  padding: 0;
   white-space: nowrap;
 }
 
@@ -327,24 +326,33 @@ aside h6 {
   text-transform: lowercase;
 }
 
+aside nav {
+  padding: 0 0 2rem 0;
+}
+
 aside nav ul,
 aside nav ul li {
   display: block;
   margin: 0;
   padding: 0;
 }
-aside nav:after {
-  content: '';
-  display: block;
-  margin-bottom: 2rem;
-}
 
 aside nav a {
-  display: inline-block;
   font-family: var(--font-sans-serif);
-  margin: 0 0 .5rem 0;
+  margin: 0;
+}
+
+main a:active,
+main a:focus,
+main a:hover {
+  background-size: 0 100%;
   text-decoration: none;
 }
+
+aside nav a { text-decoration: underline; }
+aside nav a:active,
+aside nav a:focus,
+aside nav a:hover { text-decoration: none; }
 
 .spacer { flex: 1; }
 
