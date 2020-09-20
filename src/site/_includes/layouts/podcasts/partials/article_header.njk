@@ -1,0 +1,11 @@
+<header>
+  <a href="/podcasts/" class="section-link">Podcasts</a>
+  <h1>{{ title }}</h1>
+  <h2>{{ subtitle }}</h2>{% if date %}
+  <p class="date">{{ date | usDate }}</p>{% endif %}
+  {% if tags %}
+  <nav class="tags">
+  {% for tag in tags %}
+    <a href="/notes/tags/{{ tag }}/">{{ tag }}</a>{% endfor %}
+  </nav>{% endif %}
+</header>

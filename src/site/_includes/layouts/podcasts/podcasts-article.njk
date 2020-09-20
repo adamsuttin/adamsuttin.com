@@ -1,0 +1,21 @@
+{% extends "layouts/podcasts.njk" %}
+
+{% block main_column_1 %}
+<article class="{% if contentClass %}{{ contentClass }}{% else %}content{%endif %}">
+  {% include "./partials/article_header.njk" %}
+  {% include "./partials/article_body.njk" %}
+  {% include "./partials/article_footer.njk" %}
+</article>
+{% endblock %}
+
+{% block main_column_2 %}
+<aside>
+  
+</aside>
+{% endblock %}
+
+{% block main_column_3 %}
+<aside>
+  
+</aside>
+{% endblock %}

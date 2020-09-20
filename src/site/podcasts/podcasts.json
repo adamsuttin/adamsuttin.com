@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/podcasts/podcasts-article.njk",
+  "subtitle": "Podcasts I like to listen to",
+  "bodyClass": "screen--podcasts"
+}
